@@ -1,0 +1,5 @@
+venv
+.vscode
+Production/Trade/src/trade.o
+Model/main.o
+Model/bin/main
