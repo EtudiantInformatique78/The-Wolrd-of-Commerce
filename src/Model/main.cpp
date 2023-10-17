@@ -2,6 +2,7 @@
 #include <cstdio>
 #include <exception>
 #include "../Production/Trade/trade.h"
+#include "../Geography/South-Artic-Circle/coniferous.h"
 
 int main() {
     
@@ -11,7 +12,10 @@ int main() {
 
     // std::cout << "Hello, World!" << std::endl;
     // std::cout << trader.get_money() << std::endl;
-    
+    Coniferous tree = Coniferous();
+
+    tree.produce_wood();
+
     try {
 
         Trader * home_trader = new HomeTrader;
