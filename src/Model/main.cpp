@@ -3,6 +3,7 @@
 #include <exception>
 #include "../Production/Trade/trade.h"
 #include "../Geography/South-Artic-Circle/coniferous.h"
+#include "workers/workers.h"
 
 int main() {
     
@@ -13,8 +14,10 @@ int main() {
     // std::cout << "Hello, World!" << std::endl;
     // std::cout << trader.get_money() << std::endl;
     Coniferous tree = Coniferous();
+    Worker worker = Worker();
+    worker.produce_wood(tree);
 
-    tree.produce_wood();
+
 
     try {
 
@@ -35,8 +38,11 @@ int main() {
         ft = static_cast<ForeignTrader*>(foreign_trader);
         ft->export_trade();
         ft->import_trade();
+        worker.sell_wood(*dynamic_cast<Trader*>(ft));
 
         std::cout <<  ft->get_money() << std::endl;
+
+
 
     } catch (std::exception& e){
         std::cout << "Exception: " << e.what();

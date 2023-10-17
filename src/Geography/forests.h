@@ -1,3 +1,8 @@
-class Forest {
-    virtual int produce_wood() = 0 ;
+class Wood {
+    
 };
+
+class Forest {
+    virtual Wood produce_wood() = 0 ;
+};
+

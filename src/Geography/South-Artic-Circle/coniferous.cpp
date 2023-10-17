@@ -1,6 +1,6 @@
 #include "coniferous.h"
 
-int Coniferous::produce_wood()
+Wood Coniferous::produce_wood()
 {
-    return 1;
+    return Wood();
 }
