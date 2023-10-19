@@ -1,13 +1,13 @@
 #include "workers.h"
 
-void Worker::produce_wood(Coniferous coniferous)
+void Lumberjack::produce_wood(Coniferous coniferous)
 {
     Wood produced = coniferous.produce_wood();
     
     this->v.push_back(produced);
 }
 
-void Worker::sell_wood(Trader trader)
+void Lumberjack::sell_wood(Trader trader)
 {
     Wood wood = v.back();
     v.pop_back();
@@ -15,3 +15,4 @@ void Worker::sell_wood(Trader trader)
     its_own_money += money;
 
 }
+
