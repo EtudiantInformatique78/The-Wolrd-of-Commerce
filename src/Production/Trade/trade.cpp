@@ -21,6 +21,17 @@ int Trader::pay_tree(int money, Wood wood)
     return money;
 }
 
+int Trader::pay_wheat(int money, Wheat wheat)
+{
+    int its_money = this->get_money();
+    its_money = its_money - money;
+    this->set_money(its_money);
+    this->its_wheat = wheat;
+
+    return money;
+
+}
+
 void HomeTrader::wholesale()
 {
     std::cout<< "I am a wholesaler" << std::endl;
